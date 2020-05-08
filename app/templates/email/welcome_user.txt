@@ -1,0 +1,3 @@
+Hello {{user.username}}
+Welcome to Nakish Blog
+We have just seen you have signed up for our Blog and want to welcome you to the family. Please enjoy the stories.
