@@ -2,12 +2,12 @@
 #### created, 127/05/2020
 #### By [E Naika](https://github.com/ENAIKA)
 ## Description
-* This is a web based app that help users read blog content from writers. Users are able to react on the various blog posts by commenting and writers are able t login and create the blogs.
+* This is a web based app that help users read blog content from writers. Users are able to react on the various blog posts by commenting and writers are able to login and create blogs.
 ## Setup/Installation Requirements
 * To run the website need a browser (for IE browsers version 9 and above is recommended.)
 
 #### To Contribute
-* Before starting the steps below: make sure Python3.6 is installed or have compartible version, have Flask framework and download all the necessary extensions from [requirements.txt] (https://github.com/ENAIKA/Blog/blob/master/requirements.txt) file.
+* Before starting the steps below: make sure Python3.6 is installed or have compartible version, have Flask framework and download all the necessary extensions from [requirements.txt](https://github.com/ENAIKA/Blog/blob/master/requirements.txt) file.
 Follow this steps:
 * Fork the repo
 * Create your branch 
