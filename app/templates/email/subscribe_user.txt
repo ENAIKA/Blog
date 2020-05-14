@@ -1,0 +1,3 @@
+Hello {{user.username}}
+Welcome to Nakish Blog
+Thank you for subscribing.
