@@ -1,0 +1,40 @@
+{% macro displayBlog(blog_list) %}
+
+{% for blog in blog_list %}
+<div class="container">
+
+
+
+
+  <div class="jumbotron " >
+    <h4 class="text-center" style="font-family: 'Anton', sans-serif;">{{ blog.title}}</h4>
+    <span class="text-left"><em>Written by: {{blog.userBlog.username}}</em><br>
+      <em>Posted on: {{ blog.posted}}</em></span>
+    <hr>
+    <p class="justify-content-center" style="font-family: 'Rokkitt', serif;">{{ blog.quote}}</p>
+    </hr>
+  </div>
+  {%if current_user==blog.user_id%}
+  <a class="label-label-primary" href="{{url_for('.edit',id=blog.id)}}">
+      Edit
+  </a>
+  {%endif%}
+
+  <p><span class="text-primary">Total Comments:{{blog.comments.count()}} </span><span style="padding-left: 2rem;"
+      class="text-center"><a href="{{url_for('main.new_comment',id=blog.id)}}">Add your comment </a> </span></p>
+
+  <div class="row" style=" border : thick solid #A8DADC;">
+
+    {%for comment in blog.comments%}
+    <div class="card">{{comment.comment}}
+      <span style="margin-left: 20%;">commented on: {{comment.posted}}
+      </span>
+     
+    </div> <hr style=" border : thin solid #C7F2F5;">
+    {%endfor%}
+
+    {{format_comment|safe}}
+  </div> <hr>
+  {%endfor%}
+
+  {%endmacro%}
