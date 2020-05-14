@@ -1,0 +1,31 @@
+{% extends 'base.html'%}
+
+{% block content%}
+<div class="container">
+
+
+
+
+  <div class="jumbotron ">
+    <h4 class="text-center" style="font-family: 'Anton', sans-serif;">{{ blog.title}}</h4>
+    <span class="text-left"><em>Written by: {{blog.userBlog.username}}</em><br>
+      <em>Posted on: {{ blog.posted}}</em></span><hr>
+      <p class="justify-content-center" style="font-family: 'Rokkitt', serif;">{{ blog.quote}}</p>
+    </hr>
+  </div>
+
+  <span class="text-primary">Total Comments:{{blog.comments.count()}}<br></span>
+  <div class="row">
+    
+  {%for comment in blog.comments%}
+  <div class="card">{{comment.comment}}
+   <span style="margin-left: 20%;">commented on: {{comment.posted}}
+    </span> <hr>
+  </div>
+  {%endfor%}
+
+  {{format_comment|safe}}
+</div>
+
+
+{%endblock%}
